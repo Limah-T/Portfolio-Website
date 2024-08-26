@@ -1,0 +1,1605 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.container {
+    box-sizing: border-box;
+}
+
+/* Header page styling */
+
+header {
+    max-width: 100%;
+    height: 50px; 
+    border: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.nav-bar {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+
+#my_name {
+    font-size: 22px;
+    line-height: 50px;    
+    font-weight: 500;
+    color: black;
+   
+}
+header nav ul{
+    padding-left: 55rem;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1.75rem;
+    line-height: 50px;
+    
+}
+header nav ul li a {
+    color: rgb(70, 52, 52);
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover {
+    color: orange;
+}
+
+.small_contact_box {
+    display: none;
+}
+
+.contact_box {
+    width: 60px;
+    height: 100px;
+    background-color: rgb(80, 80, 236);
+    border-radius: 0.25rem;
+    padding: 0.30rem 1.65rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.55rem;
+ 
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 4px 0;
+    
+}
+
+/* Responsive Header Styles for Portrait Mobile*/
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+
+    header {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-content: center;
+        padding: 0.55rem;
+    }
+   
+
+    .nav-bar {
+        max-width: 100%;
+        display: flex;
+        height: 100px;    
+        flex-direction: row;
+        padding: 0.75rem;
+    }
+    
+    #my_name {
+        font-size: 19px;
+        line-height: 30px;
+        font-weight: 800;
+        color: black;
+            
+    }
+
+
+
+    header nav ul {
+        display: none; 
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        width: 30%;
+        padding: 0.35rem;
+        top: 60px;
+        right: 5px;
+        margin: 0;
+        text-align: center;
+        
+    }
+
+    header nav ul li {
+        margin: 0 auto;
+    }
+
+    header nav ul li a{
+        display: block;
+        color:  white;
+        width: 100%; 
+    }
+
+    
+    header nav ul.showing {
+        display: flex;
+        
+    }
+
+    .menu-toggle {
+        display: flex;
+        
+    }
+
+    .small_contact_box {
+        display: block;
+    }
+
+    .contact_box {
+        display: none;
+        
+        
+    }
+
+}
+
+/* Responsive Header styling for landscape Mobile */
+
+@media (min-width: 481px) and (max-width: 915px) and (orientation: landscape){
+
+    header {
+        max-width: 100%;
+        height: 50px;  
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 auto;
+    }
+   
+    .menu-toggle span {
+       
+        margin: 3.5px 0;
+        
+    }
+    .nav-bar {
+        max-width: 100%;    
+        flex-direction: row;
+        padding: 0.55rem;
+    }
+
+    #my_name {
+        font-size: 19px;
+        line-height: 30px;
+        font-weight: 700;
+        color: black;
+            
+    }
+
+
+    header nav ul {
+        display: none; 
+        flex-direction: column;
+        background-color: black;
+        position: absolute;
+        width: 20%;
+        padding: 0.35rem;
+        top: 60px;
+        right: 5px;
+        margin: 0;
+        text-align: center;
+        
+    }
+
+    header nav ul li {
+        margin: 0 auto;
+    }
+
+    header nav ul li a{
+        display: block;
+        color:  white;
+        width: 100%; 
+    }
+
+    
+    header nav ul.showing {
+        display: flex;
+        
+    }
+
+    .menu-toggle {
+        display: flex;
+        
+    }
+
+    .small_contact_box {
+        display: block;
+    }
+
+    .contact_box {
+        display: none;
+        
+        
+    }
+
+}
+
+/*Responsive header styling for Portrait Tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+
+    header {
+        max-width: 100%;
+        height: 50px;  
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+   
+
+    #my_name {
+        font-size: 19px;
+        font-weight: 800;
+        color: black;
+            
+    }
+
+    .menu-toggle span {
+        margin: 0.22rem 0;
+    }
+
+    .nav-bar {
+        max-width: 100%;    
+        align-self: center;
+        padding-left: 0;
+    }
+
+
+    header nav ul {
+        display: none; 
+        flex-direction: row;
+        background-color: transparent;
+        position: absolute;
+        max-width: 100%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        padding-right: 3.5rem;
+        
+    }
+
+    header nav ul li {
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+
+    }
+
+    header nav ul li a{
+        display: block;
+        color: black;
+        max-width: 100%; 
+        padding: 0 0.45rem;
+        font-size: 19px;
+        font-weight: 500;
+      
+    }
+
+    
+    header nav ul.showing {
+        display: flex;
+        
+    }
+
+    .menu-toggle {
+        display: flex;
+        
+    }
+
+    .small_contact_box {
+        display: block;
+    }
+
+    .contact_box {
+        display: none;
+        
+        
+    }
+
+}
+
+/*Responsive header styling for Landscape Tablet */
+
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+    header {
+        max-width: 100%;
+        height: 50px;  
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+   
+
+    #my_name {
+        font-size: 22px;
+        font-weight: 800;
+        color: black;
+            
+    }
+
+    .menu-toggle span {
+        margin: 0.22rem 0;
+    }
+
+    .nav-bar {
+        max-width: 100%;    
+        align-self: center;
+        padding-left: 0;
+    }
+
+
+    header nav ul {
+        display: none; 
+        flex-direction: row;
+        background-color: transparent;
+        position: absolute;
+        max-width: 100%;
+        top: 0;
+        right: 0;
+        margin: 0 auto;
+        padding-right: 3.5rem;
+        
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 0 auto;
+        padding: 3rem;
+        text-align: center;
+        line-height: 20px;
+
+    }
+
+    header nav ul li a{
+        color: black;
+        max-width: 100%; 
+        padding: 0 0.45rem;
+        font-size: 19px;
+        font-weight: 500;
+      
+    }
+
+    
+    header nav ul.showing {
+        display: flex;
+        
+    }
+
+    .menu-toggle {
+        display: flex;
+        
+    }
+
+    .small_contact_box {
+        display: block;
+    }
+
+    .contact_box {
+        display: none;
+        
+        
+    }
+    
+}
+
+
+
+/* @media (min-width: 1279px) and (max-width: 2565px) {
+    
+    header {
+        max-width: 100%;
+        height: 50px; 
+        border: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-bar {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    
+    }
+    
+    #my_name {
+        font-size: 22px;
+        line-height: 50px;    
+        font-weight: 500;
+        color: black;
+        padding-right: 15rem;
+       
+    }
+    header nav ul{
+        padding-left: 40rem;
+    }
+    
+    header nav ul li {
+        display: inline;
+        margin-left: 1.75rem;
+        line-height: 50px;
+        
+    }
+    header nav ul li a {
+        color: rgb(70, 52, 52);
+        font-size: 1.3rem;
+    }
+    
+    header nav ul li a:hover {
+        color: orange;
+    }
+    
+    .small_contact_box {
+        display: none;
+    }
+    
+    .contact_box {
+        width: 60px;
+        height: 100px;
+        background-color: rgb(80, 80, 236);
+        border-radius: 0.25rem;
+        padding: 0.30rem 1.65rem;
+    }
+    
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 0.55rem;
+     
+    }
+    
+    .menu-toggle span {
+        width: 30px;
+        height: 5px;
+        background-color: black;
+        margin: 4px 0;
+        
+    }
+
+} */
+
+/* Home page styling */
+
+.content {
+    padding: 5rem 0;
+    z-index: 1;
+    background-color: whitesmoke;
+   
+}
+
+.pic_and_intro{
+    max-width: 65rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.my_pic {
+    max-width: 150px;
+    height: 200px;
+    border-radius: 200px;
+    margin-top: 4.5rem;
+    margin-left: 4.5rem;
+      
+}
+
+.intro{
+
+    text-align: center;
+    padding: 0 5rem;
+    max-width: 600px;
+    margin: 7rem auto 3rem auto;
+   
+}
+
+.all_boxes {
+    text-align: center;
+}
+.all_boxes ul li{
+    display: inline-block;
+    padding: 0;
+}
+
+.box_links {
+    width: 70px;
+    height: 30px;
+    border: 0.1rem grey solid;
+    margin: 1rem 3rem;
+    text-align: center;
+    
+}
+
+.box_links a {
+    padding: 0.12rem auto;
+    line-height: 30px;
+    color: orange;
+}
+
+.box_links a:hover {
+    color:rgb(80, 80, 236);
+}
+
+/* Responsive home page stying for Portrait mobile */
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+    
+    .content {
+        padding: 2rem;
+   
+}
+
+    .pic_and_intro{
+        max-width: 100%;
+        flex-direction: column;
+        padding: 0;
+        
+    }
+
+    .my_pic {
+        max-width: 150px;
+        height: 200px;
+        border-radius: 200px;
+        margin: 4.5rem auto 0 auto;
+          
+    }
+    
+    .intro{
+        text-align: center;
+        padding: 0;
+        margin: 3rem auto;
+       
+       
+    }
+    .intro h1 {
+        font-weight: 500;
+    }
+
+    .intro .all_boxes ul {
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+       
+    }
+    .all_boxes ul li{
+        padding: 0;
+
+    } 
+}
+
+/* Responsive Homepage styling  styling for landscape Mobile */
+
+@media (min-width: 481px) and (max-width: 915px) and (orientation: landscape) {
+    content {
+        padding: 2rem;
+   
+    }
+
+    .pic_and_intro{
+        max-width: 100%;
+        flex-direction: row;
+        
+    }
+
+    .my_pic {
+        max-width: 150px;
+        height: 200px;
+        border-radius: 200px;
+        margin: 4.5rem auto 0 auto;
+          
+    }
+    
+    .intro{
+        text-align: center;
+        padding: 3rem 0;
+        margin: 3rem auto;
+       
+       
+    }
+    .intro h1 {
+        font-weight: 500;
+    }
+
+    .intro .all_boxes ul {
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+       
+    }
+    .all_boxes ul li{
+        padding: 0;
+
+    }    
+}
+
+
+
+/* Responsive Home page styling for Tablet portrait */
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait)   {
+    
+    .content {
+        max-width: 100%;
+        padding-top: 7rem;
+   
+    }
+
+    .pic_and_intro{
+        max-width: 100%;
+        flex-direction: column;
+        padding: 1rem 0;
+        
+    }
+
+    .my_pic {
+        margin: 4.5rem auto 0 auto;
+          
+    }
+    
+    .intro{
+        padding: 0;
+        margin: 2rem auto 0 auto; 
+    }
+
+    .intro h1 {
+        font-weight: 700;
+    }
+    
+    .intro .all_boxes ul {
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+       
+    }
+    .all_boxes ul li{
+        padding: 0;
+
+    } 
+   
+}
+
+
+/* Responsive Home page styling for Tablet landscape */
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+    .content {
+        max-width: 100%;
+        padding-top: 7rem;
+   
+    }
+
+    .pic_and_intro{
+        max-width: 100%;
+        flex-direction: row;
+        padding: 1rem 0;
+        
+    }
+
+    .my_pic {
+        margin: 4.5rem auto 0 auto;
+          
+    }
+    
+    .intro{
+        padding: 0;
+        margin: 7rem auto 0 auto; 
+    }
+
+    .intro h1 {
+        font-weight: 700;
+    }
+    
+    .intro .all_boxes ul {
+        max-width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+       
+    }
+    .all_boxes ul li{
+        padding: 0;
+
+    } 
+   
+}
+
+/* Section 2 Home styling */
+
+.section_2 {
+    background-color: gainsboro;
+    max-width: 100%;
+    padding: 4rem 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.shape_and_text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 3.2rem;
+}
+
+.skills_text{
+    margin: 0 auto;
+}
+
+.section_2_shape {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(80, 80, 236);
+    align-self: flex-start;
+    
+}
+
+.all_skills_boxes {
+    max-width: 100%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem;
+
+}
+
+
+
+.skills_box {
+    margin: 1rem 2rem;
+    justify-content: space-around;
+   
+}
+
+.skills_box h3{
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.skills_box ul {
+    width: 200px;
+    height: 200px;
+    border: 2px solid;    
+}
+
+.skills_box ul li {
+    padding: 0.35rem;
+    list-style: none;
+    font-weight: 700;
+}
+
+.skills_box ul li em {
+    float: right;
+    color: orange;
+    font-weight: 400;
+}
+
+
+/* Responsive style for section 2 Home page Mobile */
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait){
+    .section_2 {
+        max-width: 100%;
+        margin: 0 auto;
+        
+    }
+
+    .shape_and_text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .section_2_shape {
+        display: none;
+       
+    }
+    
+    .all_skills_boxes {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+   
+      
+    }
+
+    .skills_box {
+        margin: 0 auto;
+        padding-bottom: 0.80rem;
+    }
+    
+    .skills_box h3 {
+        padding-top: 0.60rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    .shape_and_text {
+        display: flex;
+        justify-content: space-around;
+      
+    }
+    .skills_text{
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    
+    .skills_box ul {
+        margin-top: 0.10rem;
+    }
+    
+    .skills_box ul li {
+        padding: 0.35rem;
+        list-style: none;
+        font-weight: 500;
+    }
+
+    .skills_box ul li em {
+        float: right;
+        color: orange;
+        font-weight: 400;
+    }
+}
+
+/* Responsive Homepage styling for landscape Mobile */
+
+@media (min-width: 481px) and (max-width: 915px) and (orientation: landscape) {
+    .section_2 {
+        max-width: 100%;
+        margin: 0;
+        padding-bottom: 0;
+       
+    }
+
+    .shape_and_text {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .section_2_shape {
+        width: 25px;
+        height: 25px;
+       
+    }
+    
+    .all_skills_boxes {
+        max-width: 100%;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 1.5rem 10rem;
+    
+    }
+
+    .skills_box {
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+    
+    .skills_box h3 {
+        padding-bottom: 0;
+        text-align: center;
+        font-weight: 600;
+    }
+    .shape_and_text {
+        display: flex;
+        justify-content: space-around;
+      
+    }
+    .skills_text{
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .skills_box ul {
+        margin-top: 1rem;
+    }
+    
+    .skills_box ul li {
+        padding: 0.35rem;
+        list-style: none;
+        font-weight: 700;
+    }
+
+    .skills_box ul li em {
+        float: right;
+        color: orange;
+        font-weight: 400;
+    }
+}
+
+/* Responsive style for section 2 Home page Tablet Portrait*/
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait)  {
+
+    .section_2 {
+        max-width: 100%;
+    }
+    
+    .section_2_shape {
+        display: none;
+    }
+    
+    .all_skills_boxes {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 5rem;
+        padding-bottom: 0;
+    
+    }
+    
+    .shape_and_text {
+        padding-top: 0.55rem;
+    }
+
+    .skills_text{
+        padding-top: 0.35rem;
+        font-size: 1.5rem;
+       
+    }
+    
+    .skills_box ul {
+        margin-bottom: 2rem;
+        padding: 0.45rem;
+    }
+
+    .skills_box h3 {
+        font-weight: 700;
+    }
+    
+    .skills_box ul li {
+        padding: 0.35rem;
+        font-weight: 600;
+    }
+
+    .skills_box ul li em {
+        float: right;
+        color: orange;
+        font-weight: 400;
+    }
+    
+}
+
+/* Responsive section 2 Home page styling for Tablet landscape */
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+
+    .section_2 {
+        max-width: 100%;
+    }
+    
+    .section_2_shape {
+        display: none;
+    }
+    
+    .all_skills_boxes {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 10rem;
+        padding-bottom: 0;
+    
+    }
+    
+    .shape_and_text {
+        padding-top: 0.55rem;
+    }
+
+    .skills_text{
+        padding-top: 0.35rem;
+        font-size: 1.5rem;
+       
+    }
+    
+    .skills_box ul {
+        margin-bottom: 2rem;
+        padding: 0.45rem;
+    }
+
+    .skills_box h3 {
+        font-weight: 700;
+    }
+    
+    .skills_box ul li {
+        padding: 0.35rem;
+        font-weight: 600;
+    }
+
+    .skills_box ul li em {
+        float: right;
+        color: orange;
+        font-weight: 400;
+    }
+}
+
+
+.about_me {
+    max-width: 75rem;
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    margin: 0 auto;
+}
+
+.about_me p {
+    font-size: 1.4rem;
+}
+
+.story_about_me {
+    padding-right: 8rem;
+}
+.about_me_img {
+    max-width: 800px;
+    height: 300px;
+    
+}
+
+.about_me_section_2 {
+    background-color: rgb(255, 245, 231);
+} 
+
+.mission_vission {
+    display: flex;
+    flex-direction: row;
+    width: 50rem; 
+    margin: 0 auto;
+    padding: 5rem;
+    align-self: center;
+    
+}
+
+.mission {
+    line-height: 1.5rem;
+    
+} 
+
+.vission {
+    padding-left: 6rem;
+    line-height: 1.5rem; 
+} 
+
+
+/* Responsive styling of About page Mobile Portriat  */
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .about_me {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto 1rem auto;
+    }
+
+    .story_about_me {
+        max-width: 100%;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding: 4.5rem 1.5rem 1rem 1.5rem;
+        
+    }
+    
+    .about_me p {
+        font-size: 1rem;
+    }
+    
+    
+    .about_me_img {
+        max-width: 400px;
+        height: 200px;
+        padding: 0 1.5rem;
+        
+    }
+    
+    .about_me_section_2{
+        background-color: rgb(255, 245, 231);
+        max-width: 100%;
+        margin: 0;
+        padding: 2rem;
+    }    
+
+    .mission_vission {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%; 
+        margin: 0 auto;
+        padding: 0;
+    
+    }
+    
+    .mission {
+        padding-bottom: 1.5rem;
+    } 
+    
+    .vission {
+        padding-left: 0;
+    } 
+
+}
+
+/* Responsive styling of About page Mobile Landscape  */
+
+@media (min-width: 481px) and (max-width: 915px) and (orientation: landscape) {
+    .about_me {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto 1rem auto;
+    }
+
+    .story_about_me {
+        max-width: 100%;
+        justify-content: flex-start;
+        align-content: flex-start;
+        padding: 4.5rem 1.5rem 1rem 1.5rem;
+        
+    }
+    
+    .about_me p {
+        font-size: 1rem;
+    }
+    
+    
+    .about_me_img {
+        max-width: 400px;
+        height: 200px;
+        align-self: center;
+        
+    }
+    
+    .about_me_section_2{
+        background-color: rgb(255, 245, 231);
+        max-width: 100%;
+        margin: 0;
+        padding: 2rem;
+    }    
+
+    .mission_vission {
+        max-width: 100%; 
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    
+    }
+    
+    .mission {
+        padding-bottom: 1.5rem;
+    } 
+    
+    .vission {
+        padding-left: 0;
+    } 
+
+}
+
+
+
+/* Responsive styling of About page Tablet Portriat  */
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait)  {
+    .about_me_section_2 {
+        background-color: rgb(255, 245, 231);
+        max-width: 100%;
+        padding: 3rem;
+    } 
+
+    .about_me {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 8rem 2rem 2rem 2rem;
+        margin: 0 auto;
+    }
+    
+    .about_me p {
+        font-size: 1.5rem;
+    }
+    
+    .story_about_me {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    .about_me_img {
+        max-width: 800px;
+        height: 300px;
+        
+    }
+    
+    
+    .mission_vission {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        align-self: center;
+        
+    }
+    
+    .mission_vission p {
+        font-size: 1.2rem;
+    }
+    .mission {
+        line-height: 1.8rem;
+        padding: 0 2rem 4rem 4rem;
+        
+    } 
+    
+    .vission {
+        padding: 0 4rem;
+        line-height: 1.8rem; 
+    } 
+}
+
+
+/* Responsive section About styling for Tablet landscape */
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+    .about_me_section_2 {
+        background-color: rgb(255, 245, 231);
+        max-width: 100%;
+        padding: 3rem;
+    } 
+
+    .about_me {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 8rem 2rem 2rem 2rem;
+        margin: 0 auto;
+    }
+    
+    .about_me p {
+        font-size: 1.5rem;
+    }
+    
+    .story_about_me {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    .about_me_img {
+        max-width: 800px;
+        height: 300px;
+        
+    }
+    
+    
+    .mission_vission {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        align-self: center;
+        
+    }
+    
+    .mission_vission p {
+        font-size: 1.2rem;
+    }
+    .mission {
+        line-height: 1.8rem;
+        padding: 0 2rem 4rem 4rem;
+        
+    } 
+    
+    .vission {
+        padding: 0 4rem;
+        line-height: 1.8rem; 
+    } 
+}    
+
+/* Footer section styling */
+
+footer {
+    padding: 3rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color:  rgb(8, 8, 99);;
+}
+
+.footer_section {
+    max-width: 100%;
+    margin: 0.45rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.footer_shape {
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    align-self: flex-start;
+}
+
+.views h5 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 0.55rem;
+    color: white;
+}
+
+.views ul li {
+    list-style: none;
+    padding: 0.40rem;
+    font-size: 16px;
+    padding-left: 0;
+    color: white
+}
+
+.views ul li a {
+    color: white
+}
+
+.views ul li a:hover {
+    color: orange;
+}
+
+.copy_right {
+    align-self: flex-end;
+    padding-top: 12rem;
+    color: white;
+}
+
+
+/* Responsive styling for footer portrait section Mobile */
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    footer {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+       
+    }
+    
+    .footer_section {
+        max-width: 100%;
+        margin: 0 auto;
+        padding-bottom: 0.80rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .footer_shape {
+        display: none;
+    }
+    
+    .views {
+        align-self: flex-start;
+    }
+    
+    .views h5 {
+        font-size: 17px;
+        margin-top: 3rem;
+    }
+
+    
+    .copy_right {
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 4rem;
+    }
+}
+
+
+/* Responsive footer styling for landscape Mobile */
+@media (min-width: 481px) and (max-width: 915px)and (orientation: landscape) {
+    footer {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0.75rem;
+        background-color: rgb(6, 6, 97);
+    }
+    
+    .footer_section {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        
+    }
+    
+    .footer_shape {
+        display: none;
+    }
+    
+    .views {
+        align-self: flex-start;
+    }
+    
+    .views h5 {
+        font-size: 17px;
+        padding-top: 3rem;
+    }
+    
+    .copy_right {
+        text-align: center;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+}
+
+/* Responsive style for section 2 Home page Portrait Tablet */
+
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    footer {
+        padding: 0;
+        max-width: 100%;
+        margin: 0 auto;
+       
+    }
+    
+    .footer_section {
+        max-width: 100%;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .footer_shape {
+        display: none;
+    }
+    
+    .views {
+        padding: 3rem 0;
+        
+    }
+    
+    .views h5 {
+        font-size: 19px;
+        color: #fff;
+        
+    }
+    
+    .views ul li {
+        list-style: none;
+        padding: 0.40rem;
+        font-size: 17px;
+        padding-left: 0;
+        color: white;
+    }
+    
+    
+    
+    .copy_right {
+        float: right;
+        padding-top: 0;
+        padding-bottom: 3rem;
+        color: darkgrey;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+    footer {
+        padding: 0;
+        max-width: 100%;
+        margin: 0 auto;
+       
+    }
+    
+    .footer_section {
+        max-width: 100%;
+        flex-direction: row;
+        margin-top: 0;
+        padding: 3rem;
+    }
+
+    .footer_shape {
+        display: none;
+    }
+    
+    .views {
+        padding-right: 4rem;
+        
+    }
+    
+    .views h5 {
+        font-size: 19px;
+        color: #fff;
+        
+    }
+    
+    .views ul li {
+        list-style: none;
+        padding: 0.40rem;
+        font-size: 17px;
+        padding-left: 0;
+        color: white;
+    }
+    
+    
+    .copy_right {
+        float: right;
+        color: darkgrey;
+    }
+
+}
+
+/* 404 PAGE NOT FOUND */
+
+.page_not_found {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page_404_content{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 12rem;
+}
+
+.page_404_content h1, p {
+    margin: 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    .page_404_content{
+        margin: 0 auto;
+        padding: 15rem 2rem;
+    }
+
+    .page_404_content h1 p{
+        font-weight: 300;
+        
+    }
+}

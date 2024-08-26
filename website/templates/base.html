@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/favicon.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-bar">
+            <p id="my_name">Limah_T</p>
+            <nav id="nav">
+                <ul class="nav-item">
+                    <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('views.about') }}">About</a></li>
+                    <li><a href="https://github.com/Limah-T" target="_blank">Projects</a></li>
+                    <li class="small_contact_box"><a href="#!">Contact</a></li>
+                    <li class="contact_box"><a href="#!" style="color: rgb(255, 255, 255); text-align: center;" >Contact</a></li>
+                </ul>
+            </nav>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>    
+    </header>
+    <main>
+        <div class="container">{% block content %}{% endblock %}</div>
+    </main>
+    <footer>
+        <div class="footer_section">
+            <div class="footer_shape"></div>
+            <div class="views">
+                <ul>
+                    <h5>Quick Links</h5>
+                    <li><a href="{{ url_for('views.home') }}">Home</a></li>
+                    <li><a href="{{ url_for('views.about') }}">About</a></li>
+                    <li><a href="#!">Skills</a></li>
+                    <li><a href="https://github.com/Limah-T" target="_blank">Projects</a></li>
+                </ul>
+            </div>
+            <div class="views">
+                <ul>
+                    <h5>Connect with Me</h5>
+                    <li><a href="https://github.com/Limah-T" target="_blank">Github</a></li>
+                    <li><a href="#!">LinkedIn</a></li>
+                    <li><a href="https://x.com/Limtech001" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="views">
+                <ul>
+                    <h5>Contact</h5>
+                    <li>+234 913-7230-948</li>
+                    <li>+234 912-6607-581</li>
+                    <li>Email:<br>info@yahoo.com</li>
+                </ul>
+            </div>
+            <div class="copy_right">
+                <p>Copyright <em style="color: orange;">©</em> 2024 Limah_T All rights reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

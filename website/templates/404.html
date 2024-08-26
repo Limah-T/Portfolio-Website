@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block title%}Page not found{% endblock %}
+{% block content %}
+<div class="page_not_found">
+    <div class="page_404_content">
+        <h1>Oops! the page you're looking for does not exist.</h1>
+        <p>Click to go to the <a href="{{ url_for('views.home') }}" style="color: blue;">Homepage</a></p>
+    </div>    
+</div>    
+{% endblock %}
